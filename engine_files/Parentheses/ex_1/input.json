@@ -1,0 +1,93 @@
+{
+    "datasets": [
+        {
+            "name": "DS_1",
+            "structure": "DS_1"
+        },
+        {
+            "name": "DS_2",
+            "structure": "DS_2"
+        },
+        {
+            "name": "DS_2",
+            "structure": "DS_2"
+        }
+    ],
+    "structures": [
+        {
+            "name": "DS_1",
+            "components": [
+                {
+                    "name": "Id_1",
+                    "role": "Identifier",
+                    "data_type": "Integer"
+                },
+                {
+                    "name": "Id_2",
+                    "role": "Identifier",
+                    "data_type": "String"
+                },
+                {
+                    "name": "Me_1",
+                    "role": "Measure",
+                    "data_type": "Integer"
+                },
+                {
+                    "name": "Me_2",
+                    "role": "Measure",
+                    "data_type": "Number"
+                }
+            ]
+        },
+        {
+            "name": "DS_2",
+            "components": [
+                {
+                    "name": "Id_1",
+                    "role": "Identifier",
+                    "data_type": "Integer"
+                },
+                {
+                    "name": "Id_2",
+                    "role": "Identifier",
+                    "data_type": "String"
+                },
+                {
+                    "name": "Me_1",
+                    "role": "Measure",
+                    "data_type": "Integer"
+                },
+                {
+                    "name": "Me_2",
+                    "role": "Measure",
+                    "data_type": "Number"
+                }
+            ]
+        },
+        {
+            "name": "DS_2",
+            "components": [
+                {
+                    "name": "Id_1",
+                    "role": "Identifier",
+                    "data_type": "Integer"
+                },
+                {
+                    "name": "Id_2",
+                    "role": "Identifier",
+                    "data_type": "String"
+                },
+                {
+                    "name": "Me_1",
+                    "role": "Measure",
+                    "data_type": "Integer"
+                },
+                {
+                    "name": "Me_2",
+                    "role": "Measure",
+                    "data_type": "Number"
+                }
+            ]
+        }
+    ]
+}

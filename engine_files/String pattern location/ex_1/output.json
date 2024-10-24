@@ -1,0 +1,30 @@
+{
+    "datasets": [
+        {
+            "name": "DS_r",
+            "structure": "DS_r"
+        }
+    ],
+    "structures": [
+        {
+            "name": "DS_r",
+            "components": [
+                {
+                    "name": "Id_1",
+                    "role": "Identifier",
+                    "data_type": "Integer"
+                },
+                {
+                    "name": "Id_2",
+                    "role": "Identifier",
+                    "data_type": "String"
+                },
+                {
+                    "name": "int_var",
+                    "role": "Measure",
+                    "data_type": "Integer"
+                }
+            ]
+        }
+    ]
+}
