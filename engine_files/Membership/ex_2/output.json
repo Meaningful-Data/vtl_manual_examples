@@ -22,7 +22,8 @@
                 {
                     "name": "int_var",
                     "role": "Measure",
-                    "data_type": "Integer"
+                    "data_type": "Integer",
+                    "nullable": false
                 }
             ]
         }

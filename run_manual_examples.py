@@ -29,7 +29,7 @@ def format_structure(structure_dict):
                         "name": comp["name"],
                         "type": comp["data_type"],
                         "role": comp["role"],
-                        "nullable": comp["role"] != "Identifier"
+                        "nullable": comp["role"] != "Identifier" if "nullable" not in comp.keys() else comp["nullable"],
                     }
                     for comp in ds["components"]
                 ]
@@ -136,6 +136,7 @@ if __name__ == "__main__":
     # If it is set to None or {}, all tests will be run
     # not_implemented: Optional[Dict[str, Union[str, List[str]]]] = {}
     not_implemented = {
+        "Aggregate invocation": ["ex_1", "ex_2", "ex_3", "ex_4"],
         "Case": ["ex_1"],
         "Hierarchical roll-up": ["ex_1", "ex_2", "ex_3"],
         "Membership": ["ex_4", "ex_5", "ex_6"],

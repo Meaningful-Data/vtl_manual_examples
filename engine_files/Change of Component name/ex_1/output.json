@@ -25,7 +25,7 @@
                     "data_type": "String"
                 },
                 {
-                    "name": "Me_1",
+                    "name": "Me_2",
                     "role": "Measure",
                     "data_type": "Integer"
                 },

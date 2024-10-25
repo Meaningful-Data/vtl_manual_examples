@@ -37,7 +37,8 @@
                 {
                     "name": "Me_2",
                     "role": "Measure",
-                    "data_type": "Boolean"
+                    "data_type": "Boolean",
+                    "nullable": false
                 }
             ]
         }

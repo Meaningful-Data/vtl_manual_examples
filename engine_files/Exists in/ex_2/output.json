@@ -32,7 +32,8 @@
                 {
                     "name": "bool_var",
                     "role": "Measure",
-                    "data_type": "Boolean"
+                    "data_type": "Boolean",
+                    "nullable": false
                 }
             ]
         }
