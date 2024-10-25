@@ -17,9 +17,8 @@ Average value,ex_1,Fail,'int' object has no attribute 'replace'
 Between,ex_1,Fail,Assertion Error
 Calculation of a Component,ex_1,Ok,
 Calculation of a Component,ex_2,Fail,Assertion Error
-Case,ex_1,Fail,"Not valid VTL Syntax   offendingSymbol: [@15,46:49='when',<173>,3:14]   msg: mismatched input 'when' expecting ']'   line: 3"
 Ceiling,ex_1,Ok,
-Ceiling,ex_2,Fail,"('On Dataset DS_r loading: not possible to cast column Me_1 to Integer', '0-1-1-12')"
+Ceiling,ex_2,Ok,
 Change of Component name,ex_1,Fail,Assertion Error
 Character case conversion,ex_1,Ok,
 Character case conversion,ex_2,Fail,Assertion Error
@@ -29,7 +28,7 @@ Check datapoint,ex_2,Fail,'int' object has no attribute 'replace'
 Check hierarchy,ex_1,Fail,'int' object has no attribute 'replace'
 Counting the number of data points,ex_1,Fail,'int' object has no attribute 'replace'
 Counting the number of data points,ex_2,Fail,'int' object has no attribute 'replace'
-Days between two dates,ex_1,Fail,"Not valid VTL Syntax   offendingSymbol: [@19,45:44='<EOF>',<-1>,1:45]   msg: missing ';' at '<EOF>'   line: 1"
+Days between two dates,ex_1,Fail,"('No User Defined Operators have been defined. Please check transformation with output dataset DS_r', '2-3-10')"
 Division,ex_1,Ok,
 Division,ex_2,Ok,
 Division,ex_3,Ok,
@@ -66,20 +65,17 @@ Flow to stock,ex_4,Fail,Assertion Error
 Greater than,ex_1,Fail,'int' object has no attribute 'replace'
 Greater than,ex_2,Fail,'int' object has no attribute 'replace'
 Greater than,ex_3,Fail,'Measure'
-Hierarchical roll-up,ex_1,Fail,'ViralAttribute' is not a valid Role
-Hierarchical roll-up,ex_2,Fail,'ViralAttribute' is not a valid Role
-Hierarchical roll-up,ex_3,Fail,'ViralAttribute' is not a valid Role
 if-then-else,ex_1,Fail,'int' object has no attribute 'replace'
 Intersection,ex_1,Fail,'int' object has no attribute 'replace'
 Is null,ex_1,Fail,'int' object has no attribute 'replace'
 Is null,ex_2,Fail,'int' object has no attribute 'replace'
-Join,ex_1,Fail,"('Dataset DS_2 not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
-Join,ex_2,Fail,"('Dataset DS_2 not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
-Join,ex_3,Fail,"('Dataset DS_2 not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
-Join,ex_4,Fail,"('On Dataset DS_r loading: Component Id_11 is missing in Datapoints. Please check transformation with output dataset DS_r', '0-1-1-10')"
-Join,ex_5,Fail,"('Dataset DS_2 not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
+Join,ex_1,Ok,
+Join,ex_2,Ok,
+Join,ex_3,Ok,
+Join,ex_4,Ok,
+Join,ex_5,Ok,
 Join,ex_6,Ok,
-Join,ex_7,Fail,"('Dataset DS_3 not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
+Join,ex_7,Ok,
 Lag,ex_1,Fail,'int' object has no attribute 'replace'
 Last value,ex_1,Fail,'int' object has no attribute 'replace'
 Lead,ex_1,Fail,'int' object has no attribute 'replace'
@@ -99,21 +95,18 @@ Median value,ex_1,Fail,'int' object has no attribute 'replace'
 Membership,ex_1,Ok,
 Membership,ex_2,Fail,Assertion Error
 Membership,ex_3,Fail,Assertion Error
-Membership,ex_4,Fail,'ViralAttribute' is not a valid Role
-Membership,ex_5,Fail,'ViralAttribute' is not a valid Role
-Membership,ex_6,Fail,'ViralAttribute' is not a valid Role
 Minimun value,ex_1,Fail,'int' object has no attribute 'replace'
 Modulo,ex_1,Ok,
-Modulo,ex_2,Fail,"DataFrame.iloc[:, 3] (column name=""Me_2"") are different  DataFrame.iloc[:, 3] (column name=""Me_2"") values are different (25.0 %) [index]: [0, 1, 2, 3] [left]:  [0.7545, 3.45, 1.87, 5.3] [right]: [0.7545, 3.45, 1.87, 12.3] At positional index 3, first diff: 5.300000190734863 != 12.300000190734863"
-Modulo,ex_3,Fail,"DataFrame.iloc[:, 3] (column name=""Me_2"") are different  DataFrame.iloc[:, 3] (column name=""Me_2"") values are different (25.0 %) [index]: [0, 1, 2, 3] [left]:  [0.7545, 18.45, 1.87, 20.3] [right]: [0.7545, 18.45, 1.87, 12.3] At positional index 3, first diff: 20.299999237060547 != 12.300000190734863"
+Modulo,ex_2,Ok,
+Modulo,ex_3,Ok,
 Multiplication,ex_1,Ok,
 Multiplication,ex_2,Ok,
 Multiplication,ex_3,Ok,
 Natural logarithm,ex_1,Fail,Assertion Error
 Natural logarithm,ex_2,Fail,Assertion Error
 Non-persistent assignment,ex_1,Fail,'int' object has no attribute 'replace'
-Not equal to,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Id_1 to Time_Period', '0-1-1-12')"
-Not equal to,ex_2,Fail,"('On Dataset DS_r loading: not possible to cast column Id_1 to Time_Period', '0-1-1-12')"
+Not equal to,ex_1,Fail,'bool' object has no attribute 'lower'
+Not equal to,ex_2,Fail,'bool' object has no attribute 'lower'
 Number days to duration,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Me_2 to Duration', '0-1-1-12')"
 Number days to duration,ex_2,Fail,"('On Dataset DS_r loading: not possible to cast column Me_2 to Duration', '0-1-1-12')"
 Nvl,ex_1,Fail,'int' object has no attribute 'replace'
@@ -126,32 +119,30 @@ Population standard deviation,ex_1,Fail,'int' object has no attribute 'replace'
 Population variance,ex_1,Fail,'int' object has no attribute 'replace'
 Power,ex_1,Fail,Assertion Error
 Power,ex_2,Fail,Assertion Error
-Random,ex_1,Fail,"Not valid VTL Syntax   offendingSymbol: [@10,22:21='<EOF>',<-1>,1:22]   msg: missing ';' at '<EOF>'   line: 1"
-Random,ex_2,Fail,"Not valid VTL Syntax   offendingSymbol: [@25,48:47='<EOF>',<-1>,1:48]   msg: missing ';' at '<EOF>'   line: 1"
 Rank,ex_1,Fail,'int' object has no attribute 'replace'
 Ratio to report,ex_1,Fail,'int' object has no attribute 'replace'
 Removal of Components,ex_1,Fail,'int' object has no attribute 'replace'
 Rounding,ex_1,Fail,Assertion Error
-Rounding,ex_2,Fail,"('On Dataset DS_r loading: not possible to cast column Me_1 to Integer', '0-1-1-12')"
-Rounding,ex_3,Fail,"('On Dataset DS_r loading: not possible to cast column Me_1 to Integer', '0-1-1-12')"
+Rounding,ex_2,Ok,
+Rounding,ex_3,Fail,Assertion Error
 Sample standard deviation,ex_1,Fail,'int' object has no attribute 'replace'
 Sample variance,ex_1,Fail,'int' object has no attribute 'replace'
 Set difference,ex_1,Fail,'int' object has no attribute 'replace'
-Set difference,ex_2,Fail,"('On Dataset DS_r loading: Component Id_4 is missing in Datapoints.', '0-1-1-10')"
+Set difference,ex_2,Fail,'int' object has no attribute 'replace'
 Square root,ex_1,Ok,
 Square root,ex_2,Ok,
 Stock to flow,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Id_2 to Time', '0-1-1-12')"
 Stock to flow,ex_2,Fail,unsupported operand type(s) for -: 'str' and 'str'
 Stock to flow,ex_3,Fail,'int' object has no attribute 'replace'
 Stock to flow,ex_4,Fail,unsupported operand type(s) for -: 'str' and 'str'
-String concatenation,ex_1,Fail,"('Dataset DS_2 not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
+String concatenation,ex_1,Fail,Assertion Error
 String concatenation,ex_2,Fail,Assertion Error
 String length,ex_1,Fail,Assertion Error
 String length,ex_2,Fail,Assertion Error
-String length,ex_3,Fail,"('Dataset DS_2 not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
+String length,ex_3,Fail,Assertion Error
 String pattern location,ex_1,Ok,
 String pattern location,ex_2,Ok,
-String pattern location,ex_3,Fail,"('Component Me_2 not found in Dataset DS_1. Please check transformation with output dataset DS_r', '1-1-1-10')"
+String pattern location,ex_3,Ok,
 String pattern replacement,ex_1,Ok,
 String pattern replacement,ex_2,Fail,Assertion Error
 Sub-string extraction,ex_1,Fail,Assertion Error
@@ -160,7 +151,7 @@ Sub-string extraction,ex_3,Fail,Assertion Error
 Subspace,ex_1,Ok,
 Subspace,ex_2,Ok,
 Subspace,ex_3,Fail,Assertion Error
-Subtraction,ex_1,Fail,"('Dataset DS_2 not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
+Subtraction,ex_1,Ok,
 Subtraction,ex_2,Ok,
 Subtraction,ex_3,Ok,
 Sum,ex_1,Fail,'int' object has no attribute 'replace'
@@ -174,7 +165,7 @@ Truncation,ex_1,Ok,
 Truncation,ex_2,Ok,
 Truncation,ex_3,Fail,Assertion Error
 Unary minus,ex_1,Ok,
-Unary minus,ex_2,Fail,"DataFrame.iloc[:, 3] (column name=""Me_2"") are different  DataFrame.iloc[:, 3] (column name=""Me_2"") values are different (100.0 %) [index]: [0, 1, 2] [left]:  [5.0, 10.0, 12.0] [right]: [-5.0, -10.0, -12.0] At positional index 0, first diff: 5.0 != -5.0"
+Unary minus,ex_2,Ok,
 Unary plus,ex_1,Ok,
 Unary plus,ex_2,Ok,
 Union,ex_1,Fail,'int' object has no attribute 'replace'

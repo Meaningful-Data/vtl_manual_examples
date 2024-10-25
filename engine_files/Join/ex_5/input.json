@@ -5,8 +5,8 @@
             "structure": "DS_1"
         },
         {
-            "name": "DS_1",
-            "structure": "DS_1"
+            "name": "DS_2",
+            "structure": "DS_2"
         }
     ],
     "structures": [
@@ -36,7 +36,7 @@
             ]
         },
         {
-            "name": "DS_1",
+            "name": "DS_2",
             "components": [
                 {
                     "name": "Id_1",

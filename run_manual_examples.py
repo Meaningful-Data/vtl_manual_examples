@@ -17,6 +17,8 @@ def format_structure(structure_dict):
         for comp in ds["components"]:
             if "TimePeriod" in comp["data_type"]:
                 comp["data_type"] = comp["data_type"].replace("TimePeriod", "Time_Period")
+            if "TimeInterval" in comp["data_type"]:
+                comp["data_type"] = comp["data_type"].replace("TimeInterval", "Time_Interval")
 
     return {
         "datasets": [
@@ -79,7 +81,9 @@ def print_colored_result(operator: str, example: str, result: str, error: str):
     print(f"{color}Operator: {operator}, Example: {example}, Result: {result}, Error: {error}")
 
 
-def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None, verbose: bool = False):
+def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None,
+         not_implemented: Optional[Dict[str, Union[str, List[str]]]] = None,
+         verbose: bool = False):
     base_path = Path(__file__).parent / "engine_files"
     results = []
 
@@ -89,8 +93,9 @@ def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None, verb
                 continue
 
             for test_dir in operator_dir.iterdir():
-                if test_dir.is_dir() and (not selected_tests or test_dir.name in
-                                          selected_tests.get(operator_dir.name, [])):
+                if (test_dir.is_dir() and
+                        (not selected_tests or test_dir.name in selected_tests.get(operator_dir.name, [])) and
+                        (not not_implemented or test_dir.name not in not_implemented.get(operator_dir.name, []))):
                     results.append(run_test(test_dir, operator_dir.name))
 
     if verbose:
@@ -119,7 +124,6 @@ def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None, verb
 
 if __name__ == "__main__":
     # Define specific tests to run. Example: {"Absolute value": ["ex1", "ex2"]}
-    # Selected test will not modify the test result file, only will show the results in the console
     # If it is set to None or {}, all tests will be run
     selected_tests: Optional[Dict[str, Union[str, List[str]]]] = {}
     # Example of usage of specific_tests
@@ -128,6 +132,16 @@ if __name__ == "__main__":
     #     "Case": "ex_1",
     # }
 
+    # The tests that are defined in the not_implemented variable will not be run
+    # If it is set to None or {}, all tests will be run
+    # not_implemented: Optional[Dict[str, Union[str, List[str]]]] = {}
+    not_implemented = {
+        "Case": ["ex_1"],
+        "Hierarchical roll-up": ["ex_1", "ex_2", "ex_3"],
+        "Membership": ["ex_4", "ex_5", "ex_6"],
+        "Random": ["ex_1", "ex_2"],
+    }
+
     # Pass specific_tests to main() to run only the selected tests, default None
     # Pass verbose=True to print the results of each test in the console, default False
-    main(selected_tests=selected_tests, verbose=True)
+    main(selected_tests=selected_tests, not_implemented=not_implemented, verbose=True)
