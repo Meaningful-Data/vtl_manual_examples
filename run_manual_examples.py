@@ -77,7 +77,7 @@ def run_test(test_dir: Path, operator: str):
 
 
 def print_colored_result(operator: str, example: str, result: str, error: str):
-    color = Fore.GREEN if result == "Ok" else Fore.RED
+    color = Fore.GREEN if result == "Ok" else Fore.YELLOW if result == "Not implemented" else Fore.RED
     print(f"{color}Operator: {operator}, Example: {example}, Result: {result}, Error: {error}")
 
 
@@ -92,10 +92,17 @@ def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None,
             if selected_tests and operator_dir.name not in selected_tests:
                 continue
 
+            if not_implemented and operator_dir.name in not_implemented:
+                results.extend([(operator_dir.name, test, "Not implemented", "") for test
+                                in not_implemented[operator_dir.name]])
+
             for test_dir in operator_dir.iterdir():
-                if (test_dir.is_dir() and
-                        (not selected_tests or test_dir.name in selected_tests.get(operator_dir.name, [])) and
-                        (not not_implemented or test_dir.name not in not_implemented.get(operator_dir.name, []))):
+                test_name = test_dir.name
+                if (
+                        not selected_tests or test_name in selected_tests.get(operator_dir.name, [])
+                ) and (
+                        not not_implemented or test_name not in not_implemented.get(operator_dir.name, [])
+                ):
                     results.append(run_test(test_dir, operator_dir.name))
 
     if verbose:
@@ -110,15 +117,18 @@ def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None,
             writer.writerows(results)
         print(f"\n\nTests completed. Results saved in {csv_file}")
 
+    not_implemented_tests = sum(1 for test in not_implemented.values() for _ in test)
     total_tests = len(results)
     passed_tests = sum(1 for _, _, result, _ in results if result == "Ok")
     failed_tests = total_tests - passed_tests
     success_percentage = (passed_tests * 100) // total_tests if total_tests else 0
 
-    final_color = Fore.GREEN if failed_tests == 0 else Fore.RED
+    final_color = Fore.RED if failed_tests > 0 else Fore.YELLOW if (
+            not_implemented_tests > 0) else Fore.GREEN
     print(f"{final_color}\nTotal tests: {total_tests}")
     print(f"{final_color}Passed tests: {passed_tests}")
     print(f"{final_color}Failed tests: {failed_tests}")
+    print(f"{final_color}Not implemented tests: {not_implemented_tests}")
     print(f"{final_color}Success rate: {success_percentage}%")
 
 
