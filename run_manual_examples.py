@@ -4,7 +4,7 @@ import csv
 from pathlib import Path
 from vtlengine import run
 from vtlengine.API import load_datasets_with_data
-from typing import Dict, Any, List, Optional, Union
+from typing import Dict, Any, List, Optional, Union, Tuple
 from colorama import Fore, init
 
 
@@ -12,7 +12,7 @@ from colorama import Fore, init
 init(autoreset=True)
 
 
-def format_structure(structure_dict):
+def format_structure(structure_dict: Dict[str, Any]) -> Dict[str, Any]:
     for ds in structure_dict["structures"]:
         for comp in ds["components"]:
             if "TimePeriod" in comp["data_type"]:
@@ -29,7 +29,8 @@ def format_structure(structure_dict):
                         "name": comp["name"],
                         "type": comp["data_type"],
                         "role": comp["role"],
-                        "nullable": comp["role"] != "Identifier" if "nullable" not in comp.keys() else comp["nullable"],
+                        "nullable": comp["role"] != "Identifier" if
+                        "nullable" not in comp.keys() else comp["nullable"],
                     }
                     for comp in ds["components"]
                 ]
@@ -39,7 +40,7 @@ def format_structure(structure_dict):
     }
 
 
-def load_json(file_path: Path):
+def load_json(file_path: Path) -> Any:
     with file_path.open(encoding='utf-8') as f:
         return json.load(f)
 
@@ -49,7 +50,7 @@ def collect_datapoints(test_dir: Path, input_structure: Dict[str, Any]) -> List[
             (test_dir / f"{ds['name']}.csv").exists()]
 
 
-def run_test(test_dir: Path, operator: str):
+def run_test(test_dir: Path, operator: str) -> Tuple[str, str, str, str]:
     try:
         input_structure = format_structure(load_json(test_dir / "input.json"))
         reference_structure = format_structure(load_json(test_dir / "output.json"))
@@ -76,14 +77,15 @@ def run_test(test_dir: Path, operator: str):
         return operator, test_dir.name, "Fail", error
 
 
-def print_colored_result(operator: str, example: str, result: str, error: str):
-    color = Fore.GREEN if result == "Ok" else Fore.YELLOW if result == "Not implemented" else Fore.RED
+def print_colored_result(operator: str, example: str, result: str, error: str) -> None:
+    color = Fore.GREEN if result == "Ok" else (
+        Fore.YELLOW) if result == "Not implemented" else Fore.RED
     print(f"{color}Operator: {operator}, Example: {example}, Result: {result}, Error: {error}")
 
 
 def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None,
          not_implemented: Optional[Dict[str, Union[str, List[str]]]] = None,
-         verbose: bool = False):
+         verbose: bool = False) -> None:
     base_path = Path(__file__).parent / "engine_files"
     results = []
 
@@ -101,7 +103,8 @@ def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None,
                 if (
                         not selected_tests or test_name in selected_tests.get(operator_dir.name, [])
                 ) and (
-                        not not_implemented or test_name not in not_implemented.get(operator_dir.name, [])
+                        not not_implemented or test_name not in
+                        not_implemented.get(operator_dir.name, [])
                 ):
                     results.append(run_test(test_dir, operator_dir.name))
 
@@ -117,14 +120,18 @@ def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None,
             writer.writerows(results)
         print(f"\n\nTests completed. Results saved in {csv_file}")
 
-    not_implemented_tests = sum(1 for test in not_implemented.values() for _ in test)
+    if not_implemented is not None and not_implemented != {}:
+        not_implemented_tests = sum(1 for test in not_implemented.values() for _ in test)
+    else:
+        not_implemented_tests = 0
+
     total_tests = len(results)
     passed_tests = sum(1 for _, _, result, _ in results if result == "Ok")
     failed_tests = total_tests - passed_tests
     success_percentage = (passed_tests * 100) // total_tests if total_tests else 0
 
-    final_color = Fore.RED if failed_tests > 0 else Fore.YELLOW if (
-            not_implemented_tests > 0) else Fore.GREEN
+    final_color = Fore.RED if failed_tests > 0 else (
+        Fore.YELLOW) if not_implemented_tests > 0 else Fore.GREEN
     print(f"{final_color}\nTotal tests: {total_tests}")
     print(f"{final_color}Passed tests: {passed_tests}")
     print(f"{final_color}Failed tests: {failed_tests}")
@@ -133,9 +140,12 @@ def main(selected_tests: Optional[Dict[str, Union[str, List[str]]]] = None,
 
 
 if __name__ == "__main__":
+    selected_tests: Optional[Dict[str, Union[str, List[str]]]]
+    not_implemented: Optional[Dict[str, Union[str, List[str]]]]
+
     # Define specific tests to run. Example: {"Absolute value": ["ex1", "ex2"]}
     # If it is set to None or {}, all tests will be run
-    selected_tests: Optional[Dict[str, Union[str, List[str]]]] = {}
+    selected_tests = {}
     # Example of usage of specific_tests
     # selected_tests = {
     #     "Absolute value": ["ex_1", "ex_2"],
@@ -144,7 +154,6 @@ if __name__ == "__main__":
 
     # The tests that are defined in the not_implemented variable will not be run
     # If it is set to None or {}, all tests will be run
-    # not_implemented: Optional[Dict[str, Union[str, List[str]]]] = {}
     not_implemented = {
         "Aggregate invocation": ["ex_1", "ex_2", "ex_3", "ex_4"],
         "Case": ["ex_1"],
