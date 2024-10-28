@@ -12,9 +12,9 @@ Aggregate invocation,ex_4,Not implemented,
 Aggregation,ex_1,Ok,
 Aggregation,ex_2,Ok,
 Aggregation,ex_3,Ok,
-Analytic invocation,ex_1,Ok,
-Average value,ex_1,Ok,
-Between,ex_1,Ok,
+Analytic invocation,ex_1,Fail,'int' object has no attribute 'replace'
+Average value,ex_1,Fail,'int' object has no attribute 'replace'
+Between,ex_1,Fail,'bool' object has no attribute 'lower'
 Calculation of a Component,ex_1,Ok,
 Calculation of a Component,ex_2,Ok,
 Case,ex_1,Not implemented,
@@ -23,27 +23,27 @@ Ceiling,ex_2,Ok,
 Change of Component name,ex_1,Ok,
 Character case conversion,ex_1,Ok,
 Character case conversion,ex_2,Ok,
-Check,ex_1,Fail,"('At op check: The imbalance operand must have exactly one measure of type Numeric Please check transformation with output dataset DS_r', '1-1-10-1')"
-Check datapoint,ex_1,Fail,"('No Datapoint Rulesets  found. Please check transformation with output dataset DS_r', '1-3-19')"
-Check datapoint,ex_2,Fail,"('No Datapoint Rulesets  found. Please check transformation with output dataset DS_r', '1-3-19')"
-Check hierarchy,ex_1,Fail,"('No Hierarchical Rulesets  found. Please check transformation with output dataset DS_r', '1-3-19')"
-Counting the number of data points,ex_1,Ok,
-Counting the number of data points,ex_2,Ok,
+Check,ex_1,Fail,'int' object has no attribute 'replace'
+Check datapoint,ex_1,Fail,'int' object has no attribute 'replace'
+Check datapoint,ex_2,Fail,'int' object has no attribute 'replace'
+Check hierarchy,ex_1,Fail,'int' object has no attribute 'replace'
+Counting the number of data points,ex_1,Fail,'int' object has no attribute 'replace'
+Counting the number of data points,ex_2,Fail,'int' object has no attribute 'replace'
 Days between two dates,ex_1,Fail,"('No User Defined Operators have been defined. Please check transformation with output dataset DS_r', '2-3-10')"
 Division,ex_1,Ok,
 Division,ex_2,Ok,
 Division,ex_3,Ok,
 Duration to number days,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Me_1 to Duration', '0-1-1-12')"
-Element of,ex_1,Ok,
-Element of,ex_2,Ok,
-Element of,ex_3,Fail,"('No Value Domains have been defined. Please check transformation with output dataset DS_r', '2-3-10')"
-Equal to,ex_1,Ok,
-Equal to,ex_2,Ok,
-Exclusive disjunction,ex_1,Ok,
-Exclusive disjunction,ex_2,Ok,
-Exists in,ex_1,Ok,
-Exists in,ex_2,Ok,
-Exists in,ex_3,Ok,
+Element of,ex_1,Fail,'int' object has no attribute 'replace'
+Element of,ex_2,Fail,'int' object has no attribute 'replace'
+Element of,ex_3,Fail,'int' object has no attribute 'replace'
+Equal to,ex_1,Fail,'int' object has no attribute 'replace'
+Equal to,ex_2,Fail,'int' object has no attribute 'replace'
+Exclusive disjunction,ex_1,Fail,'int' object has no attribute 'replace'
+Exclusive disjunction,ex_2,Fail,'int' object has no attribute 'replace'
+Exists in,ex_1,Fail,'int' object has no attribute 'replace'
+Exists in,ex_2,Fail,'int' object has no attribute 'replace'
+Exists in,ex_3,Fail,'int' object has no attribute 'replace'
 Exponential,ex_1,Ok,
 Exponential,ex_2,Ok,
 Extract time period,ex_1,Fail,"('No User Defined Operators have been defined. Please check transformation with output dataset DS_r', '2-3-10')"
@@ -51,28 +51,28 @@ Fill time series,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast colu
 Fill time series,ex_2,Fail,"('On Dataset DS_r loading: not possible to cast column Id_2 to Time Please check transformation with output dataset DS_r', '0-1-1-12')"
 Fill time series,ex_3,Ok,
 Fill time series,ex_4,Ok,
-Fill time series,ex_5,Fail,argument of type 'int' is not iterable
-Fill time series,ex_6,Fail,argument of type 'int' is not iterable
+Fill time series,ex_5,Fail,'int' object has no attribute 'replace'
+Fill time series,ex_6,Fail,'int' object has no attribute 'replace'
 Fill time series,ex_7,Fail,"DataFrame are different  DataFrame shape mismatch [left]:  (15, 3) [right]: (9, 3)"
 Fill time series,ex_8,Ok,
 Filtering Data Points,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column At_1 to Integer', '0-1-1-12')"
-First value,ex_1,Ok,
+First value,ex_1,Fail,'int' object has no attribute 'replace'
 Floor,ex_1,Ok,
 Floor,ex_2,Ok,
 Flow to stock,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Id_2 to Time', '0-1-1-12')"
 Flow to stock,ex_2,Ok,
-Flow to stock,ex_3,Ok,
+Flow to stock,ex_3,Fail,'int' object has no attribute 'replace'
 Flow to stock,ex_4,Ok,
-Greater than,ex_1,Ok,
-Greater than,ex_2,Ok,
+Greater than,ex_1,Fail,'int' object has no attribute 'replace'
+Greater than,ex_2,Fail,'int' object has no attribute 'replace'
 Greater than,ex_3,Fail,'Measure'
 Hierarchical roll-up,ex_1,Not implemented,
 Hierarchical roll-up,ex_2,Not implemented,
 Hierarchical roll-up,ex_3,Not implemented,
-if-then-else,ex_1,Fail,"('Dataset DS_cond not found, please check input datastructures Please check transformation with output dataset DS_r', '2-3-6')"
-Intersection,ex_1,Ok,
-Is null,ex_1,Ok,
-Is null,ex_2,Ok,
+if-then-else,ex_1,Fail,'int' object has no attribute 'replace'
+Intersection,ex_1,Fail,'int' object has no attribute 'replace'
+Is null,ex_1,Fail,'int' object has no attribute 'replace'
+Is null,ex_2,Fail,'int' object has no attribute 'replace'
 Join,ex_1,Ok,
 Join,ex_2,Ok,
 Join,ex_3,Ok,
@@ -80,29 +80,29 @@ Join,ex_4,Ok,
 Join,ex_5,Ok,
 Join,ex_6,Ok,
 Join,ex_7,Ok,
-Lag,ex_1,Ok,
-Last value,ex_1,Ok,
-Lead,ex_1,Ok,
-Less than,ex_1,Ok,
+Lag,ex_1,Fail,'int' object has no attribute 'replace'
+Last value,ex_1,Fail,'int' object has no attribute 'replace'
+Lead,ex_1,Fail,'int' object has no attribute 'replace'
+Less than,ex_1,Fail,'int' object has no attribute 'replace'
 Logarithm,ex_1,Ok,
 Logarithm,ex_2,Ok,
-Logical conjunction,ex_1,Ok,
-Logical conjunction,ex_2,Ok,
-Logical disjunction,ex_1,Ok,
-Logical disjunction,ex_2,Ok,
-Logical negation,ex_1,Ok,
-Logical negation,ex_2,Ok,
-Maintaining Components,ex_1,Ok,
-Match characters,ex_1,Fail,"DataFrame.iloc[:, 4] (column name=""bool_var"") are different  DataFrame.iloc[:, 4] (column name=""bool_var"") values are different (50.0 %) [index]: [0, 1] [left]:  [False, False] [right]: [True, False] At positional index 0, first diff: False != True"
-Maximum value,ex_1,Ok,
-Median value,ex_1,Ok,
+Logical conjunction,ex_1,Fail,'int' object has no attribute 'replace'
+Logical conjunction,ex_2,Fail,'int' object has no attribute 'replace'
+Logical disjunction,ex_1,Fail,'int' object has no attribute 'replace'
+Logical disjunction,ex_2,Fail,'int' object has no attribute 'replace'
+Logical negation,ex_1,Fail,'int' object has no attribute 'replace'
+Logical negation,ex_2,Fail,'int' object has no attribute 'replace'
+Maintaining Components,ex_1,Fail,'int' object has no attribute 'replace'
+Match characters,ex_1,Fail,'bool' object has no attribute 'lower'
+Maximum value,ex_1,Fail,'int' object has no attribute 'replace'
+Median value,ex_1,Fail,'int' object has no attribute 'replace'
 Membership,ex_4,Not implemented,
 Membership,ex_5,Not implemented,
 Membership,ex_6,Not implemented,
 Membership,ex_1,Ok,
 Membership,ex_2,Ok,
 Membership,ex_3,Ok,
-Minimun value,ex_1,Ok,
+Minimun value,ex_1,Fail,'int' object has no attribute 'replace'
 Modulo,ex_1,Ok,
 Modulo,ex_2,Ok,
 Modulo,ex_3,Ok,
@@ -111,38 +111,38 @@ Multiplication,ex_2,Ok,
 Multiplication,ex_3,Ok,
 Natural logarithm,ex_1,Ok,
 Natural logarithm,ex_2,Ok,
-Non-persistent assignment,ex_1,Ok,
-Not equal to,ex_1,Fail,"('On Dataset DS_1 loading: not possible to cast column Id_1 to Time_Period Please check transformation with output dataset DS_r', '0-1-1-12')"
-Not equal to,ex_2,Fail,"('On Dataset DS_1 loading: not possible to cast column Id_1 to Time_Period Please check transformation with output dataset DS_r', '0-1-1-12')"
-Number days to duration,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Me_2 to Duration Please check transformation with output dataset DS_r', '0-1-1-12')"
-Number days to duration,ex_2,Fail,"('On Dataset DS_r loading: not possible to cast column Me_2 to Duration Please check transformation with output dataset DS_r', '0-1-1-12')"
-Nvl,ex_1,Ok,
+Non-persistent assignment,ex_1,Fail,'int' object has no attribute 'replace'
+Not equal to,ex_1,Fail,'bool' object has no attribute 'lower'
+Not equal to,ex_2,Fail,'bool' object has no attribute 'lower'
+Number days to duration,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Me_2 to Duration', '0-1-1-12')"
+Number days to duration,ex_2,Fail,"('On Dataset DS_r loading: not possible to cast column Me_2 to Duration', '0-1-1-12')"
+Nvl,ex_1,Fail,'int' object has no attribute 'replace'
 Parentheses,ex_1,Ok,
 Period indicator,ex_1,Ok,
-Period indicator,ex_2,Fail,"('Invalid implicit cast from Duration to String. Please check transformation with output dataset DS_r', '1-1-1-1')"
-Persistent assignment,ex_1,Ok,
+Period indicator,ex_2,Fail,'int' object has no attribute 'replace'
+Persistent assignment,ex_1,Fail,'int' object has no attribute 'replace'
 Pivoting,ex_1,Fail,
-Population standard deviation,ex_1,Ok,
-Population variance,ex_1,Ok,
+Population standard deviation,ex_1,Fail,'int' object has no attribute 'replace'
+Population variance,ex_1,Fail,'int' object has no attribute 'replace'
 Power,ex_1,Ok,
 Power,ex_2,Ok,
 Random,ex_1,Not implemented,
 Random,ex_2,Not implemented,
-Rank,ex_1,Ok,
-Ratio to report,ex_1,Ok,
-Removal of Components,ex_1,Ok,
+Rank,ex_1,Fail,'int' object has no attribute 'replace'
+Ratio to report,ex_1,Fail,'int' object has no attribute 'replace'
+Removal of Components,ex_1,Fail,'int' object has no attribute 'replace'
 Rounding,ex_1,Ok,
 Rounding,ex_2,Ok,
 Rounding,ex_3,Ok,
-Sample standard deviation,ex_1,Ok,
-Sample variance,ex_1,Ok,
-Set difference,ex_1,Ok,
-Set difference,ex_2,Fail,"('On Dataset DS_4 loading: not possible to cast column Id_1 to Time_Period Please check transformation with output dataset DS_r', '0-1-1-12')"
+Sample standard deviation,ex_1,Fail,'int' object has no attribute 'replace'
+Sample variance,ex_1,Fail,'int' object has no attribute 'replace'
+Set difference,ex_1,Fail,'int' object has no attribute 'replace'
+Set difference,ex_2,Fail,'int' object has no attribute 'replace'
 Square root,ex_1,Ok,
 Square root,ex_2,Ok,
 Stock to flow,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Id_2 to Time', '0-1-1-12')"
 Stock to flow,ex_2,Fail,unsupported operand type(s) for -: 'str' and 'str'
-Stock to flow,ex_3,Fail,unsupported operand type(s) for -: 'str' and 'str'
+Stock to flow,ex_3,Fail,'int' object has no attribute 'replace'
 Stock to flow,ex_4,Fail,unsupported operand type(s) for -: 'str' and 'str'
 String concatenation,ex_1,Ok,
 String concatenation,ex_2,Ok,
@@ -163,12 +163,12 @@ Subspace,ex_3,Ok,
 Subtraction,ex_1,Ok,
 Subtraction,ex_2,Ok,
 Subtraction,ex_3,Ok,
-Sum,ex_1,Ok,
+Sum,ex_1,Fail,'int' object has no attribute 'replace'
 Symmetric difference,ex_1,Ok,
 Time aggregation,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Id_2 to Time_Period', '0-1-1-12')"
 Time shift,ex_1,Fail,"('On Dataset DS_r loading: not possible to cast column Id_2 to Time', '0-1-1-12')"
 Time shift,ex_2,Ok,
-Time shift,ex_3,Fail,argument of type 'int' is not iterable
+Time shift,ex_3,Fail,'int' object has no attribute 'replace'
 Time shift,ex_4,Ok,
 Truncation,ex_1,Ok,
 Truncation,ex_2,Ok,
@@ -177,8 +177,8 @@ Unary minus,ex_1,Ok,
 Unary minus,ex_2,Ok,
 Unary plus,ex_1,Ok,
 Unary plus,ex_2,Ok,
-Union,ex_1,Ok,
-Union,ex_2,Ok,
+Union,ex_1,Fail,'int' object has no attribute 'replace'
+Union,ex_2,Fail,'int' object has no attribute 'replace'
 Unpivoting,ex_1,Ok,
 Whitespace removal,ex_1,Ok,
 Whitespace removal,ex_2,Ok,

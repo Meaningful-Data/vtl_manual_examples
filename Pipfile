@@ -8,6 +8,11 @@ vtlengine = "*"
 colorama = "*"
 
 [dev-packages]
+flake8 = "*"
+mypy = "*"
+pandas-stubs = "*"
+stubs = "*"
+types-colorama = "*"
 
 [requires]
 python_version = "3.12"
