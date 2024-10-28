@@ -32,12 +32,12 @@
                 {
                     "name": "Me_10",
                     "role": "Measure",
-                    "data_type": "Integer"
+                    "data_type": "String"
                 },
                 {
                     "name": "Me_20",
                     "role": "Measure",
-                    "data_type": "Integer"
+                    "data_type": "String"
                 }
             ]
         }

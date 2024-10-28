@@ -10,22 +10,22 @@
             "name": "DS_r",
             "components": [
                 {
-                    "name": "Id11",
+                    "name": "Id_11",
                     "role": "Identifier",
                     "data_type": "Integer"
                 },
                 {
-                    "name": "Id12",
+                    "name": "Id_12",
                     "role": "Identifier",
                     "data_type": "String"
                 },
                 {
-                    "name": "Id21",
+                    "name": "Id_21",
                     "role": "Identifier",
                     "data_type": "Integer"
                 },
                 {
-                    "name": "Id22",
+                    "name": "Id_22",
                     "role": "Identifier",
                     "data_type": "String"
                 },

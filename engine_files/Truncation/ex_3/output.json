@@ -32,7 +32,7 @@
                 {
                     "name": "Me_20",
                     "role": "Measure",
-                    "data_type": "Number"
+                    "data_type": "Integer"
                 }
             ]
         }

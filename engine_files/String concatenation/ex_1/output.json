@@ -1,13 +1,13 @@
 {
     "datasets": [
         {
-            "name": "DS_r",
-            "structure": "DS_r"
+            "name": "DS_1",
+            "structure": "DS_1"
         }
     ],
     "structures": [
         {
-            "name": "DS_r",
+            "name": "DS_1",
             "components": [
                 {
                     "name": "Id_1",

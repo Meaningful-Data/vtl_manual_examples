@@ -32,8 +32,7 @@
                 {
                     "name": "At_1",
                     "role": "Attribute",
-                    "data_type": "String",
-                    "nullable": false
+                    "data_type": "String"
                 }
             ]
         }

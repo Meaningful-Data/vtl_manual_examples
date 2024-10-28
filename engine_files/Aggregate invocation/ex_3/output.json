@@ -12,7 +12,7 @@
                 {
                     "name": "Me_1",
                     "role": "Identifier",
-                    "data_type": "Number"
+                    "data_type": "Integer"
                 },
                 {
                     "name": "At_1",

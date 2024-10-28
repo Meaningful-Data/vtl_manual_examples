@@ -145,7 +145,9 @@ if __name__ == "__main__":
 
     # Define specific tests to run. Example: {"Absolute value": ["ex1", "ex2"]}
     # If it is set to None or {}, all tests will be run
-    selected_tests = {}
+    selected_tests = {
+        "Calculation of a Component": "ex_2"
+    }
     # Example of usage of specific_tests
     # selected_tests = {
     #     "Absolute value": ["ex_1", "ex_2"],
@@ -155,11 +157,6 @@ if __name__ == "__main__":
     # The tests that are defined in the not_implemented variable will not be run
     # If it is set to None or {}, all tests will be run
     not_implemented = {
-        "Aggregate invocation": ["ex_1", "ex_2", "ex_3", "ex_4"],
-        "Case": ["ex_1"],
-        "Hierarchical roll-up": ["ex_1", "ex_2", "ex_3"],
-        "Membership": ["ex_4", "ex_5", "ex_6"],
-        "Random": ["ex_1", "ex_2"],
     }
 
     # Pass specific_tests to main() to run only the selected tests, default None

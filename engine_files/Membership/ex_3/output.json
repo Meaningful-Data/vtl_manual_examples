@@ -20,7 +20,7 @@
                     "data_type": "String"
                 },
                 {
-                    "name": "str_var",
+                    "name": "string_var",
                     "role": "Measure",
                     "data_type": "String"
                 }
