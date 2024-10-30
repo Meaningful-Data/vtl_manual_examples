@@ -58,6 +58,7 @@ def run_test(test_dir: Path, operator: str) -> Tuple[str, str, str, str]:
         reference_name = reference_structure['datasets'][0]['name']
         reference_data = {reference_name: pd.read_csv(test_dir / "DS_r.csv")}
         reference_datasets = load_datasets_with_data(reference_structure, reference_data)[0]
+        print(reference_datasets)
 
         datapoints = collect_datapoints(test_dir, input_structure)
         result = run(
@@ -146,7 +147,7 @@ if __name__ == "__main__":
     # Define specific tests to run. Example: {"Absolute value": ["ex1", "ex2"]}
     # If it is set to None or {}, all tests will be run
     selected_tests = {
-        "Calculation of a Component": "ex_2"
+        "Subspace": "ex_3"
     }
     # Example of usage of specific_tests
     # selected_tests = {
